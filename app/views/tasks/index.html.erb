@@ -1,0 +1,18 @@
+<div class="m-3">
+  <h1>My Task</h1>
+
+  <div class="form-check list-group ">
+    <ul class="">
+      <% @tasks.each do |task| %>
+        <li class="list-group ">
+          <input class="form-check-input" type="checkbox" value='' id="<%= task.title %>">
+          <label class="list-group-item" for="<%= task.title %>">
+          <%= link_to task.title, task_path(task) %>
+          </label>
+        </li>
+      <% end %>
+    </ul>
+
+    <%= link_to "Add new task", tasks_new_path %>
+  <div/>
+</div>
